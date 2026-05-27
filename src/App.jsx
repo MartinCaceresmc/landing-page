@@ -21,7 +21,7 @@ export default function LandingPage() {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://wa.me/549299XXXXXXX"
+                href="https://wa.me/5492995134979"
                 target="_blank"
                 className="bg-cyan-500 hover:bg-cyan-400 transition px-6 py-3 rounded-2xl font-medium text-black"
               >
