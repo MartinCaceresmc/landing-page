@@ -1,29 +1,31 @@
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans">
+    <div className="min-h-screen bg-gradient-to-b from-zinc-950 via-zinc-900 to-black text-zinc-100 font-sans">
       {/* HERO */}
       <section className="max-w-6xl mx-auto px-6 py-24">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-cyan-400 text-sm mb-4 tracking-widest uppercase">
-              Linux • Cloud • Soporte IT
+              Linux • Cloud • Automatización • Soporte IT
             </p>
 
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
-              Soporte IT remoto y automatización para pequeños negocios.
+              Soluciones Linux, automatización y soporte IT remoto para
+              freelancers y pequeños negocios.
             </h1>
 
             <p className="text-zinc-400 text-lg mb-8 leading-relaxed">
-              Ayudo a freelancers, estudiantes y pequeños negocios a resolver
-              problemas técnicos, optimizar sistemas Linux y automatizar tareas.
+              Ayudo a optimizar sistemas Linux, desplegar páginas web y resolver
+              problemas técnicos de forma simple, rápida y eficiente.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="#contacto"
+                href="https://wa.me/549299XXXXXXX"
+                target="_blank"
                 className="bg-cyan-500 hover:bg-cyan-400 transition px-6 py-3 rounded-2xl font-medium text-black"
               >
-                Contactarme
+                Contactarme por WhatsApp
               </a>
 
               <a
@@ -33,10 +35,15 @@ export default function LandingPage() {
                 Ver servicios
               </a>
             </div>
+
+            <div className="flex items-center gap-2 mt-6 text-green-400">
+              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
+              Disponible para proyectos freelance
+            </div>
           </div>
 
           <div>
-            <div className="bg-zinc-900 border border-zinc-800 rounded-3xl shadow-2xl p-6">
+            <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl shadow-2xl p-6">
               <div className="flex gap-2 mb-4">
                 <div className="w-3 h-3 rounded-full bg-red-500" />
                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
@@ -44,13 +51,19 @@ export default function LandingPage() {
               </div>
 
               <pre className="text-sm text-cyan-400 overflow-x-auto">
-{`martincaceres@linux ~ $ neofetch
-OS: EndeavourOS Linux
-Shell: zsh
-WM: bspwm
-CPU: Intel i3-4170
-Terminal: kitty
-Skills: Linux • Bash • AWS • IT Support`}
+{`gonzaloit@linux ~ $ whoami
+Gonzalo Martín Cáceres
+
+gonzaloit@linux ~ $ skills
+Linux
+Bash
+AWS
+Cloudflare
+React
+Nginx
+
+gonzaloit@linux ~ $ status
+● Disponible para proyectos`}
               </pre>
             </div>
           </div>
@@ -64,14 +77,15 @@ Skills: Linux • Bash • AWS • IT Support`}
             <h2 className="text-3xl font-bold mb-6">Sobre mí</h2>
 
             <p className="text-zinc-400 leading-relaxed mb-4">
-              Soy estudiante de soporte IT y usuario avanzado de Linux. Trabajo
-              principalmente con sistemas Linux, automatización mediante Bash,
-              despliegue de páginas web y resolución de problemas técnicos.
+              Soy estudiante de soporte IT y entusiasta de Linux especializado
+              en automatización, despliegue web y resolución de problemas
+              técnicos.
             </p>
 
             <p className="text-zinc-400 leading-relaxed">
-              Me enfoco en soluciones simples, rápidas y eficientes para
-              personas que necesitan ayuda técnica real sin complicaciones.
+              Trabajo con herramientas modernas como Linux, Bash, Cloudflare,
+              GitHub y Nginx para crear soluciones rápidas, eficientes y
+              accesibles.
             </p>
           </div>
 
@@ -83,12 +97,12 @@ Skills: Linux • Bash • AWS • IT Support`}
               'Cloudflare',
               'Nginx',
               'Git/GitHub',
-              'Excel',
+              'React',
               'Soporte IT',
             ].map((skill) => (
               <div
                 key={skill}
-                className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 text-center hover:border-cyan-400 transition"
+                className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-2xl p-5 text-center hover:border-cyan-400 hover:scale-105 transition duration-300"
               >
                 {skill}
               </div>
@@ -105,7 +119,7 @@ Skills: Linux • Bash • AWS • IT Support`}
         <h2 className="text-3xl font-bold mb-12">Servicios</h2>
 
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 transition">
+          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 hover:scale-105 transition duration-300">
             <h3 className="text-2xl font-semibold mb-4">
               🔧 Soporte IT remoto
             </h3>
@@ -119,7 +133,7 @@ Skills: Linux • Bash • AWS • IT Support`}
             </ul>
           </div>
 
-          <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 transition">
+          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 hover:scale-105 transition duration-300">
             <h3 className="text-2xl font-semibold mb-4">
               ☁️ Hosting y cloud
             </h3>
@@ -127,22 +141,22 @@ Skills: Linux • Bash • AWS • IT Support`}
             <ul className="space-y-3 text-zinc-400">
               <li>• Landing pages</li>
               <li>• Cloudflare Pages</li>
-              <li>• Nginx básico</li>
               <li>• HTTPS gratuito</li>
               <li>• Deploy de sitios web</li>
+              <li>• Configuración básica Nginx</li>
             </ul>
           </div>
 
-          <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 transition">
+          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 hover:scale-105 transition duration-300">
             <h3 className="text-2xl font-semibold mb-4">
               ⚡ Automatización
             </h3>
 
             <ul className="space-y-3 text-zinc-400">
               <li>• Scripts Bash</li>
-              <li>• Organización automática</li>
               <li>• Automatización de backups</li>
-              <li>• Limpieza de archivos</li>
+              <li>• Limpieza automática</li>
+              <li>• Organización de archivos</li>
               <li>• Procesamiento de datos</li>
             </ul>
           </div>
@@ -154,24 +168,68 @@ Skills: Linux • Bash • AWS • IT Support`}
         <h2 className="text-3xl font-bold mb-12">Proyectos</h2>
 
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 hover:scale-105 transition duration-300">
             <h3 className="text-xl font-semibold mb-3">
               Servidor Linux virtualizado
             </h3>
 
             <p className="text-zinc-400 leading-relaxed">
-              Implementación de Debian Server con Nginx, firewall UFW y scripts
-              Bash de mantenimiento automático.
+              Implementación de Debian Server con Nginx, UFW y scripts Bash de
+              mantenimiento automático.
             </p>
           </div>
 
-          <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 hover:scale-105 transition duration-300">
             <h3 className="text-xl font-semibold mb-3">
-              Automatización de archivos
+              Landing page en Cloudflare
             </h3>
 
             <p className="text-zinc-400 leading-relaxed">
-              Script Bash para organización automática de documentos y backups.
+              Desarrollo y despliegue de landing page utilizando React, Vite,
+              Tailwind y Cloudflare Pages.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PRECIOS */}
+      <section className="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900">
+        <h2 className="text-3xl font-bold mb-12">Servicios y precios</h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 text-center">
+            <h3 className="text-2xl font-bold mb-4">Landing Page</h3>
+
+            <p className="text-4xl font-bold text-cyan-400 mb-4">
+              USD 30+
+            </p>
+
+            <p className="text-zinc-400">
+              Desarrollo y deploy de landing pages modernas y rápidas.
+            </p>
+          </div>
+
+          <div className="bg-zinc-900/70 backdrop-blur border border-cyan-500 rounded-3xl p-8 text-center scale-105">
+            <h3 className="text-2xl font-bold mb-4">Soporte IT</h3>
+
+            <p className="text-4xl font-bold text-cyan-400 mb-4">
+              USD 10/h
+            </p>
+
+            <p className="text-zinc-400">
+              Resolución de problemas técnicos y soporte remoto.
+            </p>
+          </div>
+
+          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 text-center">
+            <h3 className="text-2xl font-bold mb-4">Automatización</h3>
+
+            <p className="text-4xl font-bold text-cyan-400 mb-4">
+              USD 20+
+            </p>
+
+            <p className="text-zinc-400">
+              Scripts Bash y automatización de tareas repetitivas.
             </p>
           </div>
         </div>
@@ -182,35 +240,35 @@ Skills: Linux • Bash • AWS • IT Support`}
         id="contacto"
         className="max-w-4xl mx-auto px-6 py-20 border-t border-zinc-900"
       >
-        <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 text-center">
+        <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-10 text-center">
           <h2 className="text-4xl font-bold mb-6">
             ¿Necesitás ayuda técnica?
           </h2>
 
           <p className="text-zinc-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Podés contactarme para soporte IT remoto, automatización,
-            configuración Linux o despliegue de páginas web.
+            Podés contactarme para soporte IT remoto, automatización Linux o
+            despliegue de páginas web.
           </p>
 
           <div className="flex flex-col gap-4 items-center text-lg">
-            <p>
-              📧 caceresmartin574@gmail.com
-            </p>
+            <p>📧 caceresmartin574@gmail.com</p>
 
-            <p>
-              💼 github.com/MartinCaceresmc
-            </p>
+            <a
+              href="https://github.com/MartinCaceresmc"
+              target="_blank"
+              className="text-cyan-400 hover:text-cyan-300 transition"
+            >
+              GitHub
+            </a>
 
-            <p>
-              📍 Neuquén, Argentina
-            </p>
+            <p>📍 Neuquén, Argentina</p>
           </div>
         </div>
       </section>
 
       {/* FOOTER */}
       <footer className="border-t border-zinc-900 py-8 text-center text-zinc-500 text-sm">
-        © 2026 Gonzalo Martín Cáceres • Linux • Cloud • Soporte IT
+        © 2026 GonzaloIT — Linux • Cloud • Automatización • Soporte IT
       </footer>
     </div>
   );
