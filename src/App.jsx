@@ -305,6 +305,14 @@ gonzaloit@linux ~ $ status
       <footer className="border-t border-zinc-900 py-8 text-center text-zinc-500 text-sm">
         © 2026 GonzaloIT — Linux • Cloud • Automatización • Soporte IT
       </footer>
+      {/* WHATSAPP FLOAT */}
+      <a
+        href="https://wa.me/5492995134979"
+        target="_blank"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-black font-bold px-5 py-4 rounded-full shadow-2xl hover:scale-110 transition duration-300"
+      >
+        WhatsApp
+      </a>
     </div>
   );
 }
