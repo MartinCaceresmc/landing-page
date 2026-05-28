@@ -1,5 +1,5 @@
-export default function LandingPage() {
 import { TypeAnimation } from 'react-type-animation';
+export default function LandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-zinc-950 via-zinc-900 to-black text-zinc-100 font-sans">
             {/* NAVBAR */}
