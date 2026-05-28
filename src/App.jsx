@@ -1,8 +1,43 @@
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-zinc-950 via-zinc-900 to-black text-zinc-100 font-sans">
+            {/* NAVBAR */}
+    <nav className="fixed top-0 left-0 w-full z-50 border-b border-zinc-800/50 bg-zinc-950/70 backdrop-blur-xl">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        
+        <h1 className="text-xl font-bold text-cyan-400">
+          GonzaloIT
+        </h1>
+
+        <div className="hidden md:flex gap-8 text-sm text-zinc-300">
+          <a href="#servicios" className="hover:text-cyan-400 transition">
+            Servicios
+          </a>
+
+          <a href="#proyectos" className="hover:text-cyan-400 transition">
+            Proyectos
+          </a>
+
+          <a href="#precios" className="hover:text-cyan-400 transition">
+            Precios
+          </a>
+
+          <a href="#contacto" className="hover:text-cyan-400 transition">
+            Contacto
+          </a>
+
+          <a
+            href="https://github.com/MartinCaceresmc"
+            target="_blank"
+            className="hover:text-cyan-400 transition"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+    </nav>
       {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section className="max-w-6xl mx-auto px-6 pt-40 pb-24">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-cyan-400 text-sm mb-4 tracking-widest uppercase">
@@ -164,7 +199,7 @@ gonzaloit@linux ~ $ status
       </section>
 
       {/* PROYECTOS */}
-      <section className="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900">
+      <section id="proyectos" className="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900">
         <h2 className="text-3xl font-bold mb-12">Proyectos</h2>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -193,7 +228,7 @@ gonzaloit@linux ~ $ status
       </section>
 
       {/* PRECIOS */}
-      <section className="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900">
+      <section id ="precios" className="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900">
         <h2 className="text-3xl font-bold mb-12">Servicios y precios</h2>
 
         <div className="grid md:grid-cols-3 gap-6">
