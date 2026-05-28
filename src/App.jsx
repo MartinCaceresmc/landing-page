@@ -1,4 +1,5 @@
 export default function LandingPage() {
+import { TypeAnimation } from 'react-type-animation';
   return (
     <div className="min-h-screen bg-gradient-to-b from-zinc-950 via-zinc-900 to-black text-zinc-100 font-sans">
             {/* NAVBAR */}
@@ -84,22 +85,31 @@ export default function LandingPage() {
                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
                 <div className="w-3 h-3 rounded-full bg-green-500" />
               </div>
+                <TypeAnimation
+                  sequence={[
+                  'gonzaloit@linux ~ $ whoami',
+                  1000,
+                  'gonzaloit@linux ~ $ whoami\nGonzalo Martín Cáceres',
+                  1500,
 
-              <pre className="text-sm text-cyan-400 overflow-x-auto">
-{`gonzaloit@linux ~ $ whoami
-Gonzalo Martín Cáceres
+                  'gonzaloit@linux ~ $ skills\nLinux\nBash\nAWS\nCloudflare\nReact\nNginx',
+                  2000,
 
-gonzaloit@linux ~ $ skills
-Linux
-Bash
-AWS
-Cloudflare
-React
-Nginx
+                  'gonzaloit@linux ~ $ status\n● Disponible para proyectos freelance',
+                  2000,
 
-gonzaloit@linux ~ $ status
-● Disponible para proyectos`}
-              </pre>
+                  'gonzaloit@linux ~ $ deploy landing-page',
+                  1500,
+
+                  '✔ Deploy successful',
+                  2500,
+                ]}
+                wrapper="pre"
+                speed={65}
+                repeat={Infinity}
+                className="text-sm text-cyan-400 overflow-x-auto whitespace-pre-line"
+              />
+              
             </div>
           </div>
         </div>
