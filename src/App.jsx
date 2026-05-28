@@ -3,15 +3,19 @@ import { motion } from 'framer-motion';
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-950 via-zinc-900 to-black text-zinc-100 font-sans">
-      
-      {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 w-full z-50 border-b border-zinc-800/50 bg-zinc-950/70 backdrop-blur-xl">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div className="min-h-screen bg-gradient-to-b from-zinc-950 via-zinc-900 to-black text-zinc-100 font-sans overflow-x-hidden">
 
-          <h1 className="text-xl font-bold text-cyan-400">
+      {/* NAVBAR PREMIUM */}
+      <nav className="fixed top-0 left-0 w-full z-50 border-b border-zinc-800/50 bg-zinc-950/70 backdrop-blur-xl">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-xl font-bold text-cyan-400"
+          >
             GonzaloIT
-          </h1>
+          </motion.h1>
 
           <div className="hidden md:flex gap-8 text-sm text-zinc-300">
             <a href="#servicios" className="hover:text-cyan-400 transition">
@@ -20,6 +24,10 @@ export default function LandingPage() {
 
             <a href="#proyectos" className="hover:text-cyan-400 transition">
               Proyectos
+            </a>
+
+            <a href="#workflow" className="hover:text-cyan-400 transition">
+              Workflow
             </a>
 
             <a href="#precios" className="hover:text-cyan-400 transition">
@@ -47,38 +55,39 @@ export default function LandingPage() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="max-w-6xl mx-auto px-6 pt-40 pb-24"
+        className="max-w-6xl mx-auto px-4 sm:px-6 pt-40 pb-24"
       >
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
+          {/* TEXTO */}
           <div>
             <p className="text-cyan-400 text-sm mb-4 tracking-widest uppercase">
               Linux • Cloud • Automatización • Soporte IT
             </p>
 
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
               Soluciones Linux, automatización y soporte IT remoto para
               freelancers y pequeños negocios.
             </h1>
 
             <p className="text-zinc-400 text-lg mb-8 leading-relaxed">
               Ayudo a optimizar sistemas Linux, desplegar páginas web y resolver
-              problemas técnicos de forma simple, rápida y eficiente.
+              problemas técnicos de forma rápida, moderna y eficiente.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="https://wa.me/5492995134979"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-cyan-500 hover:bg-cyan-400 transition px-6 py-3 rounded-2xl font-medium text-black"
+                className="bg-cyan-500 hover:bg-cyan-400 transition px-5 py-3 rounded-2xl font-medium text-black w-full sm:w-auto text-center shadow-lg shadow-cyan-500/20"
               >
                 Contactarme por WhatsApp
               </a>
 
               <a
                 href="#servicios"
-                className="border border-zinc-700 hover:border-cyan-400 hover:text-cyan-400 transition px-6 py-3 rounded-2xl"
+                className="border border-zinc-700 hover:border-cyan-400 hover:text-cyan-400 transition px-5 py-3 rounded-2xl w-full sm:w-auto text-center"
               >
                 Ver servicios
               </a>
@@ -90,104 +99,63 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div>
-            <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl shadow-2xl p-6">
+          {/* TERMINAL */}
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl shadow-2xl p-6"
+          >
 
-              <div className="flex gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-red-500" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                <div className="w-3 h-3 rounded-full bg-green-500" />
-              </div>
-
-              <TypeAnimation
-                sequence={[
-                  'gonzaloit@linux ~ $ whoami',
-                  1000,
-
-                  'gonzaloit@linux ~ $ whoami\nGonzalo Martín Cáceres',
-                  1500,
-
-                  'gonzaloit@linux ~ $ skills\nLinux\nBash\nAWS\nCloudflare\nReact\nNginx',
-                  2000,
-
-                  'gonzaloit@linux ~ $ status\n● Disponible para proyectos freelance',
-                  2000,
-
-                  'gonzaloit@linux ~ $ deploy landing-page',
-                  1500,
-
-                  '✔ Deploy successful',
-                  2500,
-                ]}
-                wrapper="pre"
-                speed={65}
-                repeat={Infinity}
-                className="text-sm text-cyan-400 overflow-x-auto whitespace-pre-line"
-              />
-
+            <div className="flex gap-2 mb-4">
+              <div className="w-3 h-3 rounded-full bg-red-500" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500" />
+              <div className="w-3 h-3 rounded-full bg-green-500" />
             </div>
-          </div>
 
+            <TypeAnimation
+              sequence={[
+                'gonzaloit@linux ~ $ whoami',
+                1000,
+
+                'gonzaloit@linux ~ $ whoami\nGonzalo Martín Cáceres',
+                1500,
+
+                'gonzaloit@linux ~ $ skills\nLinux\nBash\nAWS\nCloudflare\nReact\nNginx',
+                2000,
+
+                'gonzaloit@linux ~ $ status\n● Disponible para proyectos freelance',
+                2000,
+
+                'gonzaloit@linux ~ $ deploy landing-page',
+                1500,
+
+                '✔ Deploy successful',
+                2500,
+              ]}
+              wrapper="pre"
+              speed={65}
+              repeat={Infinity}
+              className="text-xs sm:text-sm text-cyan-400 overflow-x-auto whitespace-pre-line"
+            />
+
+          </motion.div>
         </div>
       </motion.section>
-
-      {/* SOBRE MI */}
-      <section className="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900">
-        <div className="grid md:grid-cols-2 gap-12">
-
-          <div>
-            <h2 className="text-3xl font-bold mb-6">
-              Sobre mí
-            </h2>
-
-            <p className="text-zinc-400 leading-relaxed mb-4">
-              Soy estudiante de soporte IT y entusiasta de Linux especializado
-              en automatización, despliegue web y resolución de problemas
-              técnicos.
-            </p>
-
-            <p className="text-zinc-400 leading-relaxed">
-              Trabajo con herramientas modernas como Linux, Bash, Cloudflare,
-              GitHub y Nginx para crear soluciones rápidas, eficientes y
-              accesibles.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              'Linux',
-              'Bash',
-              'AWS',
-              'Cloudflare',
-              'Nginx',
-              'Git/GitHub',
-              'React',
-              'Soporte IT',
-            ].map((skill) => (
-              <div
-                key={skill}
-                className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-2xl p-5 text-center hover:border-cyan-400 hover:scale-105 transition duration-300"
-              >
-                {skill}
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
 
       {/* SERVICIOS */}
       <section
         id="servicios"
-        className="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900"
+        className="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-t border-zinc-900"
       >
         <h2 className="text-3xl font-bold mb-12">
           Servicios
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 hover:scale-105 transition duration-300">
+          <motion.div
+            whileHover={{ y: -10 }}
+            className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 transition duration-300 shadow-xl"
+          >
             <h3 className="text-2xl font-semibold mb-4">
               🔧 Soporte IT remoto
             </h3>
@@ -199,9 +167,12 @@ export default function LandingPage() {
               <li>• Configuración de software</li>
               <li>• Backups y mantenimiento</li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 hover:scale-105 transition duration-300">
+          <motion.div
+            whileHover={{ y: -10 }}
+            className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 transition duration-300 shadow-xl"
+          >
             <h3 className="text-2xl font-semibold mb-4">
               ☁️ Hosting y cloud
             </h3>
@@ -213,9 +184,12 @@ export default function LandingPage() {
               <li>• Deploy de sitios web</li>
               <li>• Configuración básica Nginx</li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 hover:scale-105 transition duration-300">
+          <motion.div
+            whileHover={{ y: -10 }}
+            className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 transition duration-300 shadow-xl"
+          >
             <h3 className="text-2xl font-semibold mb-4">
               ⚡ Automatización
             </h3>
@@ -227,7 +201,7 @@ export default function LandingPage() {
               <li>• Organización de archivos</li>
               <li>• Procesamiento de datos</li>
             </ul>
-          </div>
+          </motion.div>
 
         </div>
       </section>
@@ -235,35 +209,86 @@ export default function LandingPage() {
       {/* PROYECTOS */}
       <section
         id="proyectos"
-        className="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900"
+        className="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-t border-zinc-900"
       >
         <h2 className="text-3xl font-bold mb-12">
           Proyectos
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 hover:scale-105 transition duration-300">
-            <h3 className="text-xl font-semibold mb-3">
-              Servidor Linux virtualizado
-            </h3>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl overflow-hidden shadow-xl"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+              alt="Servidor Linux"
+              className="w-full h-52 object-cover"
+            />
 
-            <p className="text-zinc-400 leading-relaxed">
-              Implementación de Debian Server con Nginx, UFW y scripts Bash de
-              mantenimiento automático.
-            </p>
-          </div>
+            <div className="p-8">
+              <h3 className="text-xl font-semibold mb-3">
+                Servidor Linux virtualizado
+              </h3>
 
-          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 hover:border-cyan-400 hover:scale-105 transition duration-300">
-            <h3 className="text-xl font-semibold mb-3">
-              Landing page en Cloudflare
-            </h3>
+              <p className="text-zinc-400 leading-relaxed">
+                Debian Server + Nginx + UFW + scripts Bash de automatización.
+              </p>
+            </div>
+          </motion.div>
 
-            <p className="text-zinc-400 leading-relaxed">
-              Desarrollo y despliegue de landing page utilizando React, Vite,
-              Tailwind y Cloudflare Pages.
-            </p>
-          </div>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl overflow-hidden shadow-xl"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+              alt="Landing Page"
+              className="w-full h-52 object-cover"
+            />
+
+            <div className="p-8">
+              <h3 className="text-xl font-semibold mb-3">
+                Landing page en Cloudflare
+              </h3>
+
+              <p className="text-zinc-400 leading-relaxed">
+                React + Vite + Tailwind + Cloudflare Pages + deploy automático.
+              </p>
+            </div>
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* WORKFLOW */}
+      <section
+        id="workflow"
+        className="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-t border-zinc-900"
+      >
+        <h2 className="text-3xl font-bold mb-12">
+          Workflow
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+          {[
+            '📩 Contacto',
+            '🛠️ Análisis',
+            '⚡ Desarrollo',
+            '🚀 Deploy',
+          ].map((step) => (
+            <motion.div
+              key={step}
+              whileHover={{ scale: 1.05 }}
+              className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 text-center shadow-xl"
+            >
+              <p className="text-xl font-semibold">
+                {step}
+              </p>
+            </motion.div>
+          ))}
 
         </div>
       </section>
@@ -271,15 +296,15 @@ export default function LandingPage() {
       {/* PRECIOS */}
       <section
         id="precios"
-        className="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900"
+        className="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-t border-zinc-900"
       >
         <h2 className="text-3xl font-bold mb-12">
           Servicios y precios
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 text-center">
+          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 text-center shadow-xl">
             <h3 className="text-2xl font-bold mb-4">
               Landing Page
             </h3>
@@ -293,7 +318,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="bg-zinc-900/70 backdrop-blur border border-cyan-500 rounded-3xl p-8 text-center scale-105">
+          <div className="bg-zinc-900/70 backdrop-blur border border-cyan-500 rounded-3xl p-8 text-center scale-105 shadow-2xl">
             <h3 className="text-2xl font-bold mb-4">
               Soporte IT
             </h3>
@@ -307,7 +332,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 text-center">
+          <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-8 text-center shadow-xl">
             <h3 className="text-2xl font-bold mb-4">
               Automatización
             </h3>
@@ -327,9 +352,9 @@ export default function LandingPage() {
       {/* CONTACTO */}
       <section
         id="contacto"
-        className="max-w-4xl mx-auto px-6 py-20 border-t border-zinc-900"
+        className="max-w-4xl mx-auto px-4 sm:px-6 py-20 border-t border-zinc-900"
       >
-        <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-10 text-center">
+        <div className="bg-zinc-900/70 backdrop-blur border border-zinc-800 rounded-3xl p-10 text-center shadow-2xl">
 
           <h2 className="text-4xl font-bold mb-6">
             ¿Necesitás ayuda técnica?
@@ -363,9 +388,23 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="border-t border-zinc-900 py-8 text-center text-zinc-500 text-sm">
-        © 2026 GonzaloIT — Linux • Cloud • Automatización • Soporte IT
+      {/* FOOTER MEJORADO */}
+      <footer className="border-t border-zinc-900 py-10 text-center text-zinc-500 text-sm">
+
+        <div className="mb-4">
+          <h3 className="text-cyan-400 text-xl font-bold">
+            GonzaloIT
+          </h3>
+        </div>
+
+        <p className="mb-2">
+          Linux • Cloud • Automatización • Soporte IT
+        </p>
+
+        <p>
+          © 2026 Gonzalo Martín Cáceres
+        </p>
+
       </footer>
 
       {/* WHATSAPP FLOAT */}
@@ -373,9 +412,9 @@ export default function LandingPage() {
         href="https://wa.me/5492995134979"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-black font-bold px-5 py-4 rounded-full shadow-2xl hover:scale-110 transition duration-300"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-black rounded-full shadow-2xl hover:scale-110 transition duration-300 w-16 h-16 flex items-center justify-center text-2xl"
       >
-        💬 WhatsApp
+        💬
       </a>
 
     </div>
